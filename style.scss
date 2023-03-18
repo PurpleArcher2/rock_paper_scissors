@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600&display=swap');
+
+$light-purple: #d789d7;
+$dark-purple: #5d54a4;
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: $dark-purple;
+}
+
+header{
+    background-color: $light-purple;
+    color: $dark-purple;
+    text-align: center;
+    padding: 2%;
+}
+
+section{
+    color: $light-purple;
+    font-size: 2rem;
+    padding: 5%;
+    text-align: center;
+
+    .container{
+        border: 1px solid $light-purple;
+        padding: 2%;
+        width: 20%;
+        margin: 0px auto 30px auto;
+        
+
+        &::before{
+            color: $dark-purple;
+            content: "You";
+            font-size: 1.2rem;
+            position: absolute;
+            font-weight: bold;
+            width: 10%;
+            background: $light-purple;
+            right: 750px;
+            bottom: 447px;
+        }
+
+        &::after{
+            content: "Bot";
+            color: $dark-purple;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 750px;
+            font-weight: bold;
+            background-color: $light-purple;
+            width: 10%;
+            bottom: 447px;
+        }
+    }
+}
+
+.img-cont{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.option{
+    border: 1px solid $light-purple;
+    padding: 10px;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    transition: ease-in-out 100ms;
+
+    &:hover{
+        transform: scale(1.2);
+        transition: ease-in-out 100ms;
+    }
+}
+
+.result{ 
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.green_glow {
+    border: 1px solid #7dd87d;
+    box-shadow: 0 0 10px #4c9173;
+}
+
+.red_glow {
+    border: 1px solid #b84d69;
+    box-shadow: 0 0 10px #f96d6d;
+}
+
+.gray_glow{
+    border: 1px solid #837d7d;
+    box-shadow: 0 0 10px #d6d0b8;
+}
+
+@media screen and (max-width: 400px) {
+
+    header{
+        margin: 100px 50px 50px 50px;
+    }
+
+    section .container{
+        width: 250px;
+    }
+
+    section .container::before{
+        right: 0;
+        left: 100px;
+        bottom: 540px;
+    }
+    section .container::after{
+        left: 250px;
+        bottom: 540px;
+        
+    }
+
+}
