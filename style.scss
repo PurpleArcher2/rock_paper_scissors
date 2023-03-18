@@ -32,31 +32,6 @@ section{
         padding: 2%;
         width: 20%;
         margin: 0px auto 30px auto;
-        
-
-        &::before{
-            color: $dark-purple;
-            content: "You";
-            font-size: 1.2rem;
-            position: absolute;
-            font-weight: bold;
-            width: 10%;
-            background: $light-purple;
-            right: 750px;
-            bottom: 447px;
-        }
-
-        &::after{
-            content: "Bot";
-            color: $dark-purple;
-            font-size: 1.2rem;
-            position: absolute;
-            left: 750px;
-            font-weight: bold;
-            background-color: $light-purple;
-            width: 10%;
-            bottom: 447px;
-        }
     }
 }
 
@@ -93,18 +68,25 @@ section{
 }
 
 .red_glow {
-    border: 1px solid #b84d69;
-    box-shadow: 0 0 10px #f96d6d;
+    border: 1px solid #ff4c4c;
+    box-shadow: 0 0 10px #ee2c2c;
 }
 
 .gray_glow{
-    border: 1px solid #837d7d;
-    box-shadow: 0 0 10px #d6d0b8;
+    border: 1px solid #ffffff80;
+    box-shadow: 0 0 10px #b1b0af;
 }
 
+
+.player_container{
+    display: flex;
+    justify-content: center;
+    gap: 11%;
+}
 @media screen and (max-width: 400px) {
 
     header{
+        width: auto;
         margin: 100px 50px 50px 50px;
     }
 
@@ -112,15 +94,15 @@ section{
         width: 250px;
     }
 
-    section .container::before{
-        right: 0;
-        left: 100px;
-        bottom: 540px;
-    }
-    section .container::after{
-        left: 250px;
-        bottom: 540px;
-        
+    .player_container{
+        gap: 45%;
     }
 
 }
+
+// @media screen and (max-width: 1050px){
+
+//     header{
+//         margin: 200px;
+//     }
+// }
